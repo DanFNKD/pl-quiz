@@ -43,6 +43,12 @@ document.addEventListener("DOMContentLoaded", function() {
         incorrectDisplay.textContent = incorrect;
     }
 
+    function displayMessage(isCorrect, questionElement, correctAnswer) {
+        let messageElement = document.createElement('p');
+        messageElement.textContent = isCorrect ? 'Great work, you got that one right!' : 'Unlucky, the correct answer is ${correctAnswer}';
+        questionElement.appendChild(messageElement);
+    }
+
     function checkAnswer(questionElement, questionId) {
         let options = questionElement.querySelectorAll('.option input[type="radio"]');
         let selectedOption = null;
