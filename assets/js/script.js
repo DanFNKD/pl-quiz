@@ -92,6 +92,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         updateScore();
         displayMessage(isCorrect, questionElement, correctAnswer);
+
+        let submitButton = questionElement.querySelector('.submit-button');
+        submitButton.disabled = true;
     }
 
     questions.forEach(function(question) {
