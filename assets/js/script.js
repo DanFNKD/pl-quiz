@@ -45,46 +45,60 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function displayMessage(isCorrect, questionElement, correctAnswer) {
         let messageElement = document.createElement('p');
-        messageElement.textContent = isCorrect ? 'Great work, you got that one right!' : 'Unlucky, the correct answer is ${correctAnswer}';
+        messageElement.textContent = isCorrect ? `Great work, you got that one right!` : `Unlucky, the correct answer is ${correctAnswer}`;
         questionElement.appendChild(messageElement);
     }
 
     function checkAnswer(questionElement, questionId) {
         let options = questionElement.querySelectorAll('.option input[type="radio"]');
         let selectedOption = null;
+
         options.forEach(function(option) {
             if (option.checked) {
                 selectedOption = option;
             }
         });
-    }
 
-    let selectedValue;
-    if (selectedOption) {
+
+        let selectedValue;
+        if (selectedOption) {
         selectedValue = selectedOption.value;
-    } else {
+        } else {
         selectedValue = null;
-    }
-
-    let correctAnswer = null;
-    let matchingQuestion = null;
-    for (let i = 0; i < correctAnswerMap.length; i++) {
-        if (correctAnswerMap[i].question === questionId) {
-            matchingQuestion - correctAnswerMap[i];
-            break;
         }
-    }
-    if (matchingQuestion) {
-        correctAnswer = matchingQuestion.answer;
-    } else {
-        correctAnswer = null;
+
+        let correctAnswer = null;
+        let matchingQuestion = null;
+        for (let i = 0; i < correctAnswerMap.length; i++) {
+            if (correctAnswerMap[i].question === questionId) {
+            matchingQuestion = correctAnswerMap[i];
+                break;
+            }
+        }
+        if (matchingQuestion) {
+            correctAnswer = matchingQuestion.answer;
+        } else {
+            correctAnswer = null;
+        }
+
+        let isCorrect = false;
+        if (selectedValue !== null && correctAnswer !== null) {
+            isCorrect = selectedValue === correctAnswer;
+        }
+
+        if (isCorrect) {
+            score++;
+        }
+
+        updateScore();
+        displayMessage(isCorrect, questionElement, correctAnswer);
     }
 
-    let isCorrect = false;
-    if (selectedValue !== null && correctAnswer !== null) {
-        isCorrect = selectedValue === correctAnswer;
-    }
-
-    
-
+    questions.forEach(function(question) {
+        let questionId = question.id;
+        let submitButton = question.querySelector('.submit-button');
+        submitButton.addEventListener('click', function() {
+            checkAnswer(question,questionId);
+        });
+    });
 });
