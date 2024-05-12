@@ -36,5 +36,13 @@ document.addEventListener("DOMContentLoaded", function() {
         { question: 'question30', answer: 'Chris Wood' },
     ];
 
+    function updateScore() {
+        let scoreDisplay = document.getElementById('score');
+        let incorrectDisplay = document.getElementById('incorrect');
+        scoreDisplay.textContent = score;
+        incorrectDisplay.textContent = incorrect;
+    }
+
+    
 
 });
