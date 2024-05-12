@@ -59,4 +59,32 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    let selectedValue;
+    if (selectedOption) {
+        selectedValue = selectedOption.value;
+    } else {
+        selectedValue = null;
+    }
+
+    let correctAnswer = null;
+    let matchingQuestion = null;
+    for (let i = 0; i < correctAnswerMap.length; i++) {
+        if (correctAnswerMap[i].question === questionId) {
+            matchingQuestion - correctAnswerMap[i];
+            break;
+        }
+    }
+    if (matchingQuestion) {
+        correctAnswer = matchingQuestion.answer;
+    } else {
+        correctAnswer = null;
+    }
+
+    let isCorrect = false;
+    if (selectedValue !== null && correctAnswer !== null) {
+        isCorrect = selectedValue === correctAnswer;
+    }
+
+    
+
 });
