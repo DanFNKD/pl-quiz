@@ -43,6 +43,14 @@ document.addEventListener("DOMContentLoaded", function() {
         incorrectDisplay.textContent = incorrect;
     }
 
-    
+    function checkAnswer(questionElement, questionId) {
+        let options = questionElement.querySelectorAll('.option input[type="radio"]');
+        let selectedOption = null;
+        options.forEach(function(option) {
+            if (option.checked) {
+                selectedOption = option;
+            }
+        });
+    }
 
 });
