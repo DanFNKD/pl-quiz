@@ -111,6 +111,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to display trophy message based on the user's score
     function displayTrophyMessage() {
+        let trophyContainer = document.getElementById('trophy-container');
+        trophyContainer.innerHTML = '';
+        
         let trophyMessageElement = document.createElement('p');
         let trophyImageElement = document.createElement('img');
 
@@ -129,7 +132,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
             // Appends message and image to the container
-        let trophyContainer = document.getElementById('trophy-container');
         trophyContainer.appendChild(trophyMessageElement);
         trophyContainer.appendChild(trophyImageElement);
     }
