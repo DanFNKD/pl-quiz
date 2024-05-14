@@ -58,7 +58,7 @@ img {
     padding: 5px;
 }
 
-/* Score area styles*/
+/* Score area styles */
 .score-area {
     font-size: 16px;
 }
@@ -67,4 +67,10 @@ img {
     display: inline-block;
     margin-right: 20px;
     padding-bottom: 20px;
+}
+
+/* Trophy image styles */
+.trophy-image {
+    display: block;
+    max-width: 75%;
 }
