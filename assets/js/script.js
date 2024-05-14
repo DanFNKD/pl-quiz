@@ -126,7 +126,8 @@ document.addEventListener("DOMContentLoaded", function() {
             trophyMessageElement.textContent = `Unlucky! You got ${score} questions correct. Why not retake the quiz for a shot at a trophy?`;
         }
 
-            // Appends message and image to the body of the HTML
+            // Appends message and image to the container
+        let trophyContainer = document.getElementById('trophy-container');
         document.body.appendChild(trophyMessageElement);
         document.body.appendChild(trophyImageElement);
     }
