@@ -154,8 +154,10 @@ document.addEventListener("DOMContentLoaded", function() {
             checkAnswer(question);
         });
 
-        displayTrophyMessage();
-        document.getElementById('submit-button').disabled = true;
+        if (answeredQuestions === totalQuestions) {
+            displayTrophyMessage();
+            document.getElementById('submit-button').disabled = true;
+        }
     }
 
     // Adds event listeners to the question's submit button
