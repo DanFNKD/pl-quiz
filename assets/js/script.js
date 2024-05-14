@@ -76,6 +76,16 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
+        let questionId = questionElement.id;
+
+        let correctAnswer = '';
+        for (let i = 0;i < correctAnswerMap.length; i++) {
+            if (correctAnswerMap[i].question === questionId) {
+                correctAnswer = correctAnswerMap[i].answer;
+                break;
+            }
+        }
+
         // Determines the value of the selected option
         let selectedValue = selectedOption.value;
         let correctAnswer = selectedOption.dataset.correctAnswer;
