@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let questions = document.querySelectorAll('.question');
     let score = 0;
     let incorrect = 0;
+    let answeredQuestions = 0;
 
     let correctAnswerMap = [
         { question: 'question1', answer: 'Brian Deane' },
