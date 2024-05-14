@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function checkAnswer(questionElement) {
         let options = questionElement.querySelectorAll('.option input[type="radio"]');
         let selectedOption = null;
+        let unansweredQuestions = [];
 
         // Loops through radio inputs to find the one that is selected
         options.forEach(function(option) {
@@ -71,15 +72,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Alert to show a user that no option has been selected
         if (!selectedOption) {
-            alert('Please select an answer before submitting');
+            unansweredQuestions.push(questionElement.id);
             return;
         }
 
         // Determines the value of the selected option
         let selectedValue = selectedOption.value;
-
         let correctAnswer = selectedOption.dataset.correctAnswer;
-
         let isCorrect = selectedValue === correctAnswer;
 
         // Updates the score and incorrect count, displays a message and disables the submit button
@@ -124,17 +123,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function submitQuiz() {
+        console.log("Submit button clicked");
         questions.forEach(function(question) {
             checkAnswer(question);
         });
     }
 
     // Adds event listeners to the question's submit button
-    questions.forEach(function(question) {
-        let questionId = question.id;
-        let submitButton = question.querySelector('.submit-button');
-        submitButton.addEventListener('click', function() {
-            checkAnswer(question,questionId);
-        });
-    });
+    document.getElementById('submit-button').addEventListener('click', submitQuiz);
 });
