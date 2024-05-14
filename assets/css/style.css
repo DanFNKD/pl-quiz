@@ -8,3 +8,14 @@
     box-sizing: border-box;
 }
 
+/* General styles */
+body {
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+}
+
+h1 {
+    color: #3d195b;
+    font-family: 'Kanit', sans-serif;
+    text-decoration: solid;
+}
