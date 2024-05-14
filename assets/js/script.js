@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     let questions = document.querySelectorAll('.question');
+    let totalQuestions = questions.length;
     let score = 0;
     let incorrect = 0;
     let answeredQuestions = 0;
@@ -91,11 +92,37 @@ document.addEventListener("DOMContentLoaded", function() {
             score++;
         }
 
+        answeredQuestions++;
         updateScore();
         displayMessage(isCorrect, questionElement, correctAnswer);
 
         let submitButton = questionElement.querySelector('.submit-button');
         submitButton.disabled = true;
+
+        if (answeredQuestions === totalQuestions) {
+            displayTrophyMessage();
+        }
+    }
+
+    function displayTrophyMessage() {
+        let trophyMessageElement = document.createElement('p');
+        let trophyImageElement = document.createElement('img');
+
+        if (score >= 20) {
+            trophyMessageElement.textContent = 'Congratulations! You earned a Gold trophy!';
+            trophyImageElement.src = 'assets/images/trophy1.png';
+        } else if (score >= 15) {
+            trophyMessageElement.textContent = 'Great job! You earned a Silver trophy!';
+            trophyImageElement.src = 'assets/images/trophy2.png';
+        } else if (score >= 10) {
+            trophyMessageElement.textContent = 'Good effort! You earned a Bronze trophy!';
+            trophyImageElement.src = 'assets/images/trophy3.png';
+        } else {
+            trophyMessageElement.textContent = 'Unlucky! Why not retake the quiz for a shot at a trophy?';
+        }
+
+        document.body.appendChild(trophyMessageElement);
+        document.body.appendChild(trophyImageElement);
     }
 
     questions.forEach(function(question) {
