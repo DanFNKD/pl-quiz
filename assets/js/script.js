@@ -109,16 +109,16 @@ document.addEventListener("DOMContentLoaded", function() {
         let trophyImageElement = document.createElement('img');
 
         if (score >= 20) {
-            trophyMessageElement.textContent = 'Congratulations! You earned a Gold trophy!';
+            trophyMessageElement.textContent = `Congratulations! You earned a Gold trophy for getting ${score} questions correct!`;
             trophyImageElement.src = 'assets/images/trophy1.png';
         } else if (score >= 15) {
-            trophyMessageElement.textContent = 'Great job! You earned a Silver trophy!';
+            trophyMessageElement.textContent = `Great job! You earned a Silver trophy for getting ${score} questions correct!`;
             trophyImageElement.src = 'assets/images/trophy2.png';
         } else if (score >= 10) {
-            trophyMessageElement.textContent = 'Good effort! You earned a Bronze trophy!';
+            trophyMessageElement.textContent = `Good effort! You earned a Bronze trophy for getting ${score} questions correct!`;
             trophyImageElement.src = 'assets/images/trophy3.png';
         } else {
-            trophyMessageElement.textContent = 'Unlucky! Why not retake the quiz for a shot at a trophy?';
+            trophyMessageElement.textContent = `Unlucky! You got ${score} questions correct. Why not retake the quiz for a shot at a trophy?`;
         }
 
         document.body.appendChild(trophyMessageElement);
