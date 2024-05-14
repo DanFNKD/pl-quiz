@@ -133,9 +133,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function submitQuiz() {
         console.log("Submit button clicked");
+        let allAnswered = true;
+
+        questions.forEach(function(question) {
+            let options = question.querySelectorAll('.option input[type="radio"]');
+            let selectedOption = Array.from(options).some(option => option.checked);
+
+            if (!selectedOption) {
+                allAnswered = false;
+            }
+        });
+
+        if (!allAnswered) {
+            alert("Please answer all of the questions before submitting");
+            return;
+        }
+
         questions.forEach(function(question) {
             checkAnswer(question);
         });
+
+        displayTrophyMessage();
+        document.getElementById('submit-button').disabled = true;
     }
 
     // Adds event listeners to the question's submit button
