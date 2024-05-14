@@ -1,10 +1,14 @@
+// Listen for DOMContentLoaded event
 document.addEventListener("DOMContentLoaded", function() {
+
+    // Variables to store references and keep track of scores, incorrect answers and answered questions
     let questions = document.querySelectorAll('.question');
     let totalQuestions = questions.length;
     let score = 0;
     let incorrect = 0;
     let answeredQuestions = 0;
 
+    // Array mapping each question ID to the correct answer
     let correctAnswerMap = [
         { question: 'question1', answer: 'Brian Deane' },
         { question: 'question2', answer: 'Man Utd' },
@@ -38,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { question: 'question30', answer: 'Chris Wood' },
     ];
 
+    // Function to update the score and incorrect answers
     function updateScore() {
         let scoreDisplay = document.getElementById('score');
         let incorrectDisplay = document.getElementById('incorrect');
@@ -45,27 +50,32 @@ document.addEventListener("DOMContentLoaded", function() {
         incorrectDisplay.textContent = incorrect;
     }
 
+    // Function to display a message based on the user's answer
     function displayMessage(isCorrect, questionElement, correctAnswer) {
         let messageElement = document.createElement('p');
         messageElement.textContent = isCorrect ? `Great work, you got that one right!` : `Unlucky, the correct answer is ${correctAnswer}`;
         questionElement.appendChild(messageElement);
     }
 
+    // Function to check the user's selected answer against the correct answer
     function checkAnswer(questionElement, questionId) {
         let options = questionElement.querySelectorAll('.option input[type="radio"]');
         let selectedOption = null;
 
+        // Loops through radio inputs to find the one that is selected
         options.forEach(function(option) {
             if (option.checked) {
                 selectedOption = option;
             }
         });
 
+        // Alert to show a user that no option has been selected
         if (!selectedOption) {
             alert('Please select an answer before submitting');
             return;
         }
 
+        // Determines the value of the selected option
         let selectedValue;
         if (selectedOption) {
         selectedValue = selectedOption.value;
@@ -75,12 +85,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
         let correctAnswer = null;
         let matchingQuestion = null;
+
+        // Loops through the correctAnswerMap to find the correct answer for the current question
         for (let i = 0; i < correctAnswerMap.length; i++) {
             if (correctAnswerMap[i].question === questionId) {
             matchingQuestion = correctAnswerMap[i];
                 break;
             }
         }
+
         if (matchingQuestion) {
             correctAnswer = matchingQuestion.answer;
         } else {
@@ -92,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
             isCorrect = selectedValue === correctAnswer;
         }
 
+        // Updates the score and incorrect count, displays a message and disables the submit button
         if (isCorrect) {
             score++;
         } else {
@@ -105,15 +119,18 @@ document.addEventListener("DOMContentLoaded", function() {
         let submitButton = questionElement.querySelector('.submit-button');
         submitButton.disabled = true;
 
+        // Displays trophy message if all questions are answered
         if (answeredQuestions === totalQuestions) {
             displayTrophyMessage();
         }
     }
 
+    // Function to display trophy message based on the user's score
     function displayTrophyMessage() {
         let trophyMessageElement = document.createElement('p');
         let trophyImageElement = document.createElement('img');
 
+        // Determines which message is shown to the user based on their score
         if (score >= 20) {
             trophyMessageElement.textContent = `Congratulations! You earned a Gold trophy for getting ${score} questions correct!`;
             trophyImageElement.src = 'assets/images/trophy1.png';
@@ -127,10 +144,12 @@ document.addEventListener("DOMContentLoaded", function() {
             trophyMessageElement.textContent = `Unlucky! You got ${score} questions correct. Why not retake the quiz for a shot at a trophy?`;
         }
 
+            // Appends message and image to the body of the HTML
         document.body.appendChild(trophyMessageElement);
         document.body.appendChild(trophyImageElement);
     }
 
+    // Adds event listeners to the question's submit button
     questions.forEach(function(question) {
         let questionId = question.id;
         let submitButton = question.querySelector('.submit-button');
