@@ -76,12 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // Determines the value of the selected option
-        let selectedValue;
-        if (selectedOption) {
-        selectedValue = selectedOption.value;
-        } else {
-        selectedValue = null;
-        }
+        let selectedValue = selectedOption.value;
 
         let correctAnswer = null;
         let matchingQuestion = null;
