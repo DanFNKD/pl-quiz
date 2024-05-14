@@ -123,6 +123,12 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.appendChild(trophyImageElement);
     }
 
+    function submitQuiz() {
+        questions.forEach(function(question) {
+            checkAnswer(question);
+        });
+    }
+
     // Adds event listeners to the question's submit button
     questions.forEach(function(question) {
         let questionId = question.id;
