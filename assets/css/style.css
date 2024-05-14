@@ -57,7 +57,7 @@ img {
 
 /* Button styles */
 
-.submit-button {
+#submit-button {
     font-family: 'Kanit', sans-serif;
     background-color: #3d195b;
     color: white;
