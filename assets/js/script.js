@@ -132,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
         trophyContainer.appendChild(trophyImageElement);
     }
 
+    // Function to submit the quiz
     function submitQuiz() {
         console.log("Submit button clicked");
         let allAnswered = true;
