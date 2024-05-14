@@ -18,8 +18,14 @@ body {
 h1 {
     color: #3d195b;
     font-family: 'Kanit', sans-serif;
-    text-decoration: solid;
     font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+h2 {
+    color: #3d195b;
+    font-size: 20px;
     margin-bottom: 20px;
     margin-top: 10px;
 }
