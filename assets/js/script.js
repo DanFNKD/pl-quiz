@@ -88,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Determines the value of the selected option
         let selectedValue = selectedOption.value;
-        let correctAnswer = selectedOption.dataset.correctAnswer;
         let isCorrect = selectedValue === correctAnswer;
 
         // Updates the score and incorrect count, displays a message and disables the submit button
