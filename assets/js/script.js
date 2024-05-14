@@ -128,8 +128,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Appends message and image to the container
         let trophyContainer = document.getElementById('trophy-container');
-        document.body.appendChild(trophyMessageElement);
-        document.body.appendChild(trophyImageElement);
+        trophyContainer.appendChild(trophyMessageElement);
+        trophyContainer.appendChild(trophyImageElement);
     }
 
     function submitQuiz() {
