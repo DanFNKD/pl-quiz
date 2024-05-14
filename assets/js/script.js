@@ -94,6 +94,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (isCorrect) {
             score++;
+        } else {
+            incorrect++;
         }
 
         answeredQuestions++;
