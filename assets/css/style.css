@@ -33,6 +33,7 @@ img {
 /* Questions styles */
 .question {
     margin-bottom: 20px;
+    max-width: 95%;
 }
 
 .question p {
@@ -44,4 +45,17 @@ img {
 .options {
     margin-bottom: 10px;
     list-style-type: none;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+/* Score area styles*/
+.score-area {
+    font-size: 16px;
+}
+
+.scores {
+    display: inline-block;
+    margin-right: 20px;
+    padding-bottom: 20px;
 }
