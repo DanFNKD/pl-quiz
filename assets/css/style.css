@@ -72,5 +72,9 @@ img {
 /* Trophy image styles */
 .trophy-image {
     display: block;
-    max-width: 75%;
+    max-width: 50%;
+}
+
+.trophy-message {
+    font-size: 16px;
 }
