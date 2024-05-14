@@ -13,9 +13,7 @@ A live version of the project can be found here - https://danfnkd.github.io/play
 + UX
     + Site Purpose
     + User Demographic
-    + New Users
     + User Goals
-    + Requirements
     + Design
         + Colors
         + Typography
@@ -53,63 +51,38 @@ This website was created for:
 - Fans of other leagues looking to improve their knowledge
 - Anybody interested in football
 
-### New Users
-
-- As a new user I want to test my knowledge of the Premier League.
-- As a new user I want to see how I scored at the end of the quiz.
-
 ### User Goals
 
-- Find out about Play Football sessions
-- Understand more about Football
-- Understand more about the physical and mental benefits of playing
-- Join a likeminded community
-- Receive updates on new sessions that are easier/more convenient for me to attend 
-
-### Requirements
-
-A static responsive website that incorporates the technologies that I have learned so far containing some of the more advanced functionality. The development process needs to be well documented through a version control system such as GitHub.
-
-Required technologies: HTML & CSS
+- Learn more about the Premier League - Current and historical
+- See what they have scored
 
 ### Design
 
-As this was my first project, the design has been influence by the "Love Running" project as well as my past experience with website design.
-
-My objective was to create a site that was minimalistic, clean and had high readability. There isn't a targetted demographic therefore ensuring that the website felt agnostic was key.
-
-The Play Football website is divided into three sections: header, body and footer. The navigation in the header uses an icon from 768 pixels and down.
+The project utilises very simple design as not to distract attention from the questions.
 
 #### Colors
 
-There are two colors used throughout the website, white (#ffffff) and dark green (#023020). The green was inspired by the color of a football pitch and using a dark shade increased user readability.
+There are two colors used throughout the website, white (#ffffff) and dark purple (#3d195b). The purple was taken from the Premier League's new logo.
 
 #### Typography
 
-The Google Font [Bebas Neue](https://fonts.google.com/specimen/Bebas+Neue?query=bebas+neue) was chosen as the font for the header elements with a fallback of Sans-Serif.
-
-The Google Font [Montserrat](https://fonts.google.com/specimen/Montserrat?query=montserrat) was chosen as the font for paragraph elements with a fallback font of Sans-Serif.
+The Google Font [Kanit](https://fonts.google.com/specimen/Kanit?query=kanit) was chosen as the font for the text elements with a fallback of Sans-Serif.
 
 #### Images
 
-Images have been chosen in accordance with the color and content. The purpose of the website is to inspire and motivate.
+The Premier League logo was used on the page. Different trophies were selected to represent gold, silver and bronze.
 
 ## Features
 
-The Play Football webste is a three-age website consisting of the following sections:
+The Play Football webste is a single-page website consisting of the following sections:
 
-- Header Section (Logo & Navigation Bar)
-- Home Page Image
-- Home Page Section
-- Benefits Page Image
-- Benefits Page Section
-- Signup Page Image
-- Signup Page Section
-- Footer Section
+- Landing Page
+- Quiz Area
+- Final Score Screens
 
 ### Existing Features
 
-#### Header Section with Logo and Navigation Bar
+#### Landing Page
 
 - The Header consists of of the text "Play Football" aligned to the left and a Navigation Bar which is aligned to the right.
 - Featured on all three pages, the Navigation Bar includes links to the Home Page, Benefits Page and Signup Page.
@@ -119,13 +92,13 @@ The Play Football webste is a three-age website consisting of the following sect
 ![Header and Navigation 768px and down, closed](./assets/readme-images/navigationbar-768px.png)
 ![Header and Navigation 768px and down, open](./assets/readme-images/navigationbar-768px-open.png)
 
-#### Home Page Image
+#### Quiz Area
 
 - The Home Page Image was selected to show that Football can be enjoyed by simply stepping foot on a grass surface. The image is isolated and conveys the feeling that many people wanting to participate but not knowing how may be feeling.
 
 ![Home Page Image](./assets/readme-images/homepageimage.png)
 
-#### Home Page Section
+#### Final Score Screens
 
 - The opening provides an introduction to the sport of Football, highlighting the sheer scale of its popularity and the reasons for participation.
 - It then links to the main objective of the site, encouraging people to participate in a session or sign up to join the community.
@@ -133,47 +106,11 @@ The Play Football webste is a three-age website consisting of the following sect
 
 ![Home Page Section](./assets/readme-images/homepagesection.png)
 
-#### Benefits Page Image
-
-- The image shows a large number of fans attending a Football match. This compliments the content on the page which highlights the mental benefits of participation alongside the physical ones. It aims to continue the theme of scale referenced on the Home Page.
-
-![Benefits Page Image](./assets/readme-images/benefitsimage.png)
-
-#### Benefits Page Section
-
-- The core content on the page outlines the benefits of playing Football, both physical and mental.
-- Font Awesome icons are used to break up the text.
-- An inspirational video showcasing some emotive moments in Football was included to further entice people to participate.
-- The YouTube video is responsive and doesn't autoplay on any browser.
-
-![Benefits Page Section](./assets/readme-images/benefitssection.png)
-![Benefits Page Youtube Video](./assets/readme-images/benefitssectionyoutube.png)
-
-#### Signup Page Image
-
-- The final image merges the concepts from the preceding two images, showcasing people playing football on a grass surface surrounded by likeminded people in a social setting.
-
-![Signup Page Image](./assets/readme-images/signupimage.png)
-
-#### Sign Up Page Section
-
-- Text included to serve as a call to action and encourage people to submit their data into the form.
-- Form designed to grab attention and increase sign up likelihood.
-- Each individual field was tested as well as a completed submission.
-
-![Signup Page Section](./assets/readme-images/signupsection.png)
-![Signup Form Validation](./assets/readme-images/signupvalidationcomplete.png)
-
-#### Footer Section
-
-- Footer links to X, Facebook, Youtube & Instagram included and validated.
-
-![Footer Section](./assets/readme-images/footer.png)
-
 ## Technologies Used
 
 - HTML
 - CSS
+- Javascript
 
 ## Testing
 
@@ -181,14 +118,12 @@ Testing was conducted using Google Chrome and Safari (laptop and mobile). Testin
 
 Main issues discovered:
 
-1. Initial Home Page image was blurry.
-- Replaced with a higher resolution image.
-2. YouTube video was autoplaying.
-- Added code to stop this behaviour.
-3. Menu not working properly on smaller screens.
-- Added a football icon to be used on smaller screens and be consistent with the design.
-4. GitHub bug that prevented me from loading project with GitHub Pages.
-- Contacted Code Institute Tutor Support for troubleshooting. Initially tried to manually remove code from the page but that didn't work. Code was copied across to a new repository resolving the issue.
+1. User was able to click submit without selecting an answer.
+- Added an if statement to prevent this behaviour and display a message to the user.
+2. User was able to select multiple radio boxes.
+- Applied name attribute to questions in html.
+3. Favicon was stretched.
+- Sourced new image to use.
 
 ### Validator Testing
 
