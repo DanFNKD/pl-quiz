@@ -75,15 +75,9 @@ img {
     padding-bottom: 20px;
 }
 
-/* Trophy image styles */
-.trophy-image {
-    display: block;
-    max-width: 50%;
-}
+/* Trophy styles */
 
-.trophy-message {
-    font-size: 14px;
-}
+
 
 /* Footer */
 .footer {

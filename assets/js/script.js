@@ -97,6 +97,8 @@ document.addEventListener("DOMContentLoaded", function() {
             incorrect++;
         }
 
+        answeredQuestions++;
+
         updateScore();
         displayMessage(isCorrect, questionElement, correctAnswer);
 
@@ -134,7 +136,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to submit the quiz
     function submitQuiz() {
-        console.log("Submit button clicked");
         let allAnswered = true;
 
         questions.forEach(function(question) {
@@ -156,6 +157,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         if (answeredQuestions === totalQuestions) {
+            console.log("Calling displayTrophyMessage");
             displayTrophyMessage();
             document.getElementById('submit-button').disabled = true;
         }
