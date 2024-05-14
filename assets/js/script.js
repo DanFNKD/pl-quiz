@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Function to check the user's selected answer against the correct answer
-    function checkAnswer(questionElement, questionId) {
+    function checkAnswer(questionElement) {
         let options = questionElement.querySelectorAll('.option input[type="radio"]');
         let selectedOption = null;
 
@@ -78,27 +78,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // Determines the value of the selected option
         let selectedValue = selectedOption.value;
 
-        let correctAnswer = null;
-        let matchingQuestion = null;
+        let correctAnswer = selectedOption.dataset.correctAnswer;
 
-        // Loops through the correctAnswerMap to find the correct answer for the current question
-        for (let i = 0; i < correctAnswerMap.length; i++) {
-            if (correctAnswerMap[i].question === questionId) {
-            matchingQuestion = correctAnswerMap[i];
-                break;
-            }
-        }
-
-        if (matchingQuestion) {
-            correctAnswer = matchingQuestion.answer;
-        } else {
-            correctAnswer = null;
-        }
-
-        let isCorrect = false;
-        if (selectedValue !== null && correctAnswer !== null) {
-            isCorrect = selectedValue === correctAnswer;
-        }
+        let isCorrect = selectedValue === correctAnswer;
 
         // Updates the score and incorrect count, displays a message and disables the submit button
         if (isCorrect) {
@@ -107,16 +89,13 @@ document.addEventListener("DOMContentLoaded", function() {
             incorrect++;
         }
 
-        answeredQuestions++;
         updateScore();
         displayMessage(isCorrect, questionElement, correctAnswer);
-
-        let submitButton = questionElement.querySelector('.submit-button');
-        submitButton.disabled = true;
 
         // Displays trophy message if all questions are answered
         if (answeredQuestions === totalQuestions) {
             displayTrophyMessage();
+            document.getElementById('submit-button').disabled = true;
         }
     }
 
