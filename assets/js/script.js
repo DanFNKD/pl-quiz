@@ -61,6 +61,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
+        if (!selectedOption) {
+            alert('Please select an answer before submitting');
+            return;
+        }
 
         let selectedValue;
         if (selectedOption) {
