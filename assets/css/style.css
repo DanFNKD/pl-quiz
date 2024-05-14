@@ -78,3 +78,27 @@ img {
 .trophy-message {
     font-size: 16px;
 }
+
+/* Footer */
+.footer {
+    background-color: #3d195b;
+    padding: 20px;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -10px;
+}
+
+#social-media {
+    display: block;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#social-media a {
+    color: white;
+}
