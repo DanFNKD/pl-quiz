@@ -103,3 +103,44 @@ img {
     color: white;
     font-size: 24px;
 }
+
+/* Media query for larger screens 1024px and larger */
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 24px;
+        padding-left: 15px;
+    }
+    
+    h1 {
+        font-size: 30px;
+    }
+    
+    h2 {
+        font-size: 26px;
+    }
+    
+    img {
+        max-width: 225px;
+    }
+    
+    .question p {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .options {
+        font-size: 22px;
+        padding-left: 10px;
+    }
+    
+    .score-area {
+        font-size: 22px;
+    }
+    
+    #social-media a {
+        color: white;
+        font-size: 24px;
+    }
+
+}
