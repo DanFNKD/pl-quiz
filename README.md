@@ -1,12 +1,10 @@
 # Premier League Quiz
 
-![Responsive screenshot](assets/images/readme-images/am-i-responsive.png)
-
-
-
 The website was created to test people's knowledge of the Premier League. It contains a mix of questions over the tournaments 30+ year history, making this a fantastic test for people of all ages!
 
-A live version of the project can be found here - https://danfnkd.github.io/pl-quiz/.
+![Responsive screenshot](assets/images/readme-images/am-i-responsive.png)
+
+A live version of the project can be found [here](https://danfnkd.github.io/pl-quiz/).
 
 # Table of Content
 
@@ -167,7 +165,7 @@ Deployment process:
 6. Click "Save"
 7. The "github-pages" link is now visible in the "Deployments" section on the repository
 
-A live version of the project can be found here - https://danfnkd.github.io/pl-quiz/.
+A live version of the project can be found [here](https://danfnkd.github.io/pl-quiz/).
 
 ## Content
 
