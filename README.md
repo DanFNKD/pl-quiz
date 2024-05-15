@@ -36,7 +36,7 @@ A live version of the project can be found [here](https://danfnkd.github.io/pl-q
 
 ### Site Purpose
 
-The quiz is designed to challenge users with 30 questions on the Premier League. For each question, the user is able to see if they have answered correctly. If not, they are presented with the correct answer to help improve their knowledge. They can see how many questions they answered correctly/incorrectly and a message/image is displayed when all questions are answered to reward performance.
+The quiz is designed to challenge users with 30 questions on the Premier League. Once submitted, the user is able to see if they have answered correctly. If not, they are presented with the correct answer to help improve their knowledge. They can see how many questions they answered correctly/incorrectly and a message/image is displayed when all questions are answered to reward performance.
 
 ### User Demographic
 
