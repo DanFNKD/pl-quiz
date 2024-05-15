@@ -74,19 +74,19 @@ The Premier League logo was used on the page. Different trophies were selected t
 
 ## Features
 
-The Play Football webste is a single-page website consisting of the following sections:
+The Premier League Quiz website is a single-page website consisting of the following sections:
 
-- Landing Page
+- Premier League Logo and Heading
 - Quiz Area
-- Final Score Screens
+- Score Area
+- Prize Area
 
 ### Existing Features
 
-#### Landing Page
+#### Premier League Logo and Heading
 
-- The Header consists of of the text "Play Football" aligned to the left and a Navigation Bar which is aligned to the right.
-- Featured on all three pages, the Navigation Bar includes links to the Home Page, Benefits Page and Signup Page.
-- The Header is designed responsively across device types.
+- The Premier League logo is featured to provide context to the quiz.
+- The heading provides an overview of the quiz and aims to entice users to complete it.
 
 ![Header and Navigation standard](./assets/readme-images/navigationbar.png)
 ![Header and Navigation 768px and down, closed](./assets/readme-images/navigationbar-768px.png)
@@ -94,17 +94,23 @@ The Play Football webste is a single-page website consisting of the following se
 
 #### Quiz Area
 
-- The Home Page Image was selected to show that Football can be enjoyed by simply stepping foot on a grass surface. The image is isolated and conveys the feeling that many people wanting to participate but not knowing how may be feeling.
+- The Quiz area is laid out simply to ensure nothing distracts the user from the quiz. Each question has four different options.
 
 ![Home Page Image](./assets/readme-images/homepageimage.png)
 
-#### Final Score Screens
+#### Score Area
 
-- The opening provides an introduction to the sport of Football, highlighting the sheer scale of its popularity and the reasons for participation.
-- It then links to the main objective of the site, encouraging people to participate in a session or sign up to join the community.
-- A table is included to provide an overview of the existing sessions available at Play Football and is designed responsively for mobile devices.
+- There is a score area at the bottom of the page that allows users to see their score once the quiz is submitted.
 
 ![Home Page Section](./assets/readme-images/homepagesection.png)
+
+#### Prize Area
+
+- Upon completion of the quiz, the user is presented with different text/imagery dependant on their score.
+
+#### Features Left to Implement
+
+- A video could have been added at the bottom of the quiz to highlight some of the best moments from the Premier League's history (i.e. best goals, best moments).
 
 ## Technologies Used
 
@@ -122,7 +128,9 @@ Main issues discovered:
 - Added an if statement to prevent this behaviour and display a message to the user.
 2. User was able to select multiple radio boxes.
 - Applied name attribute to questions in html.
-3. Favicon was stretched.
+3. A submit button was applied to each question
+- This was not ideal for the user experience and was amended.
+4. Favicon was stretched.
 - Sourced new image to use.
 
 ### Validator Testing
@@ -131,6 +139,8 @@ Main issues discovered:
     - No errors were returned when the code was passed through the official W3C Validator.
 - CSS
     - No errors were returned when the code passed through the official Jigsaw Validator.
+- Javascript
+    - No errors were returned when the code passed through the official JSHint Validator.
 
 ### Unfixed Bugs
 
@@ -156,21 +166,19 @@ A live version of the project can be found here - https://danfnkd.github.io/play
 
 ## Content
 
-- Text for the benefits of Football was taken from:
-    - https://footballflick.com/blogs/news/how-football-can-improve-you-mental-health 
-    - https://www.pushdoctor.co.uk/exercise/the-health-benefits-of-playing-football 
-- Certain aspects of the design were inspired by the "Love Running" project, including the Table on Page 1 and the Footer.
-- The icons in the benefits section and footer section were taken from [Font Awesome](https://fontawesome.com/).
+- Questions for the quiz were taken from the Premier League website:
+    - https://www.premierleague.com/news/2743086
+- Instructions on how to implement forEach loops was taken from this [YouTube] (https://www.youtube.com/watch?v=uOZWH0KEUs4).
+- Assistance with implementing mapping was taken from this [YouTube] (https://www.youtube.com/watch?v=hLgUTM3FOII).
+- The icons in the footer section were taken from [Font Awesome](https://fontawesome.com/).
 
 ## Media
 
-- All of the images used in the project were taken from [Pexels](https://www.pexels.com/).
+- The logo image used in the project were taken from the Premier League's [Wikipedia Page](https://en.wikipedia.org/wiki/Premier_League).
+- The trophy icons were taken from [Flaticon](https://en.wikipedia.org/wiki/Premier_League). 
 
 ## Credits
 
 Martina Terlevic
-    - My Code Institute Mentor, thank you for your help with design and time management!
-
-Sean and Roo
-    - Tutors that helped me through the anomalous GitHub Pages issue!
+    - My Code Institute Mentor, thank you for your help with queries and time management!
 
