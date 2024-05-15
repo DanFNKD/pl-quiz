@@ -176,8 +176,8 @@ A live version of the project can be found here - https://danfnkd.github.io/pl-q
 
 - Questions for the quiz were taken from the Premier League website:
     - https://www.premierleague.com/news/2743086
-- Instructions on how to implement forEach loops was taken from this ![YouTube] (https://www.youtube.com/watch?v=uOZWH0KEUs4).
-- Assistance with implementing mapping was taken from this ![YouTube] (https://www.youtube.com/watch?v=hLgUTM3FOII).
+- Instructions on how to implement forEach loops was taken from this ![YouTube](https://www.youtube.com/watch?v=uOZWH0KEUs4).
+- Assistance with implementing mapping was taken from this ![YouTube](https://www.youtube.com/watch?v=hLgUTM3FOII).
 - The icons in the footer section were taken from [Font Awesome](https://fontawesome.com/).
 
 ## Media
