@@ -139,11 +139,11 @@ Main issues discovered:
 ### Validator Testing
 
 - HTML
-    - No errors were returned when the code was passed through the official ![W3C validator](https://validator.w3.org/).
+    - No errors were returned when the code was passed through the official [W3C validator](https://validator.w3.org/).
 - CSS
-    - No errors were returned when the code passed through the official ![Jigsaw validator](https://jigsaw.w3.org/css-validator/).
+    - No errors were returned when the code passed through the official [Jigsaw validator](https://jigsaw.w3.org/css-validator/).
 - Javascript
-    - No errors were returned when the code passed through the official ![JSHint validator](https://jshint.com/).
+    - No errors were returned when the code passed through the official [JSHint validator](https://jshint.com/).
         -   The following metrics were returned:
         -   There are 10 functions in this file.
         -   Function with the largest signature take 3 arguments, while the median is 1.
@@ -176,8 +176,8 @@ A live version of the project can be found here - https://danfnkd.github.io/pl-q
 
 - Questions for the quiz were taken from the Premier League website:
     - https://www.premierleague.com/news/2743086
-- Instructions on how to implement forEach loops was taken from this ![YouTube](https://www.youtube.com/watch?v=uOZWH0KEUs4).
-- Assistance with implementing mapping was taken from this ![YouTube](https://www.youtube.com/watch?v=hLgUTM3FOII).
+- Instructions on how to implement forEach loops was taken from this [YouTube](https://www.youtube.com/watch?v=uOZWH0KEUs4).
+- Assistance with implementing mapping was taken from this [YouTube](https://www.youtube.com/watch?v=hLgUTM3FOII).
 - The icons in the footer section were taken from [Font Awesome](https://fontawesome.com/).
 
 ## Media
