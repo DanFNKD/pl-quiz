@@ -20,14 +20,11 @@ A live version of the project can be found here - https://danfnkd.github.io/pl-q
         + Images
 + Features
     + Existing Features
-        + Header Section with Logo and Navigation Bar
-        + Home Page Image
-        + Home Page Section
-        + Benefits Page Image
-        + Benefits Page Section
-        + Signup Page Image
-        + Signup Page Section
-        + Footer Section
+        + Premier League Logo and Heading
+        + Quiz Area
+        + Score Area
+        + Prize Area
+        + Features Left to Implement
 + Technologies Used
 + Testing
     + Validator Testing
