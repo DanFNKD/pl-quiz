@@ -144,6 +144,11 @@ Main issues discovered:
     - No errors were returned when the code passed through the official ![Jigsaw validator](https://jigsaw.w3.org/css-validator/).
 - Javascript
     - No errors were returned when the code passed through the official ![JSHint validator](https://jshint.com/).
+        -   The following metrics were returned:
+        -   There are 10 functions in this file.
+        -   Function with the largest signature take 3 arguments, while the median is 1.
+        -   Largest function has 24 statements in it, while the median is 4.
+        -   The most complex function has a cyclomatic complexity value of 6 while the median is 2.
 
 ### Unfixed Bugs
 
