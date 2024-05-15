@@ -1,12 +1,12 @@
 # Premier League Quiz
 
-![Responsive screenshot](./assets/readme-images/responsiveness.png)
+![Responsive screenshot](assets/images/readme-images/am-i-responsive.png)
 
 
 
 The website was created to test people's knowledge of the Premier League. It contains a mix of questions over the tournaments 30+ year history, making this a fantastic test for people of all ages!
 
-A live version of the project can be found here - https://danfnkd.github.io/playfootball/
+A live version of the project can be found here - https://danfnkd.github.io/pl-quiz/.
 
 # Table of Content
 
@@ -88,25 +88,28 @@ The Premier League Quiz website is a single-page website consisting of the follo
 - The Premier League logo is featured to provide context to the quiz.
 - The heading provides an overview of the quiz and aims to entice users to complete it.
 
-![Header and Navigation standard](./assets/readme-images/navigationbar.png)
-![Header and Navigation 768px and down, closed](./assets/readme-images/navigationbar-768px.png)
-![Header and Navigation 768px and down, open](./assets/readme-images/navigationbar-768px-open.png)
+![Premier League Logo and Heading](assets/images/readme-images/logo-heading.png)
 
 #### Quiz Area
 
 - The Quiz area is laid out simply to ensure nothing distracts the user from the quiz. Each question has four different options.
 
-![Home Page Image](./assets/readme-images/homepageimage.png)
+![Quiz Area Image](assets/images/readme-images/quiz-area.png)
 
 #### Score Area
 
 - There is a score area at the bottom of the page that allows users to see their score once the quiz is submitted.
 
-![Home Page Section](./assets/readme-images/homepagesection.png)
+![Score Area](assets/images/readme-images/score-area.png)
 
 #### Prize Area
 
 - Upon completion of the quiz, the user is presented with different text/imagery dependant on their score.
+
+![Prize Area - 20+](assets/images/readme-images/20+.png)
+![Prize Area - 16-19](assets/images/readme-images/16-19.png)
+![Prize Area - 11-15](assets/images/readme-images/11-15.png)
+![Prize Area - 10 or less](assets/images/readme-images/10-or-less.png)
 
 #### Features Left to Implement
 
@@ -128,19 +131,19 @@ Main issues discovered:
 - Added an if statement to prevent this behaviour and display a message to the user.
 2. User was able to select multiple radio boxes.
 - Applied name attribute to questions in html.
-3. A submit button was applied to each question
-- This was not ideal for the user experience and was amended.
+3. A submit button was applied to each question but this didn't lead to a good user experience.
+- The individual submit buttons were removed and a single one was added at the end of the quiz.
 4. Favicon was stretched.
 - Sourced new image to use.
 
 ### Validator Testing
 
 - HTML
-    - No errors were returned when the code was passed through the official W3C Validator.
+    - No errors were returned when the code was passed through the official ![W3C validator](https://validator.w3.org/).
 - CSS
-    - No errors were returned when the code passed through the official Jigsaw Validator.
+    - No errors were returned when the code passed through the official ![Jigsaw validator](https://jigsaw.w3.org/css-validator/).
 - Javascript
-    - No errors were returned when the code passed through the official JSHint Validator.
+    - No errors were returned when the code passed through the official ![JSHint validator](https://jshint.com/).
 
 ### Unfixed Bugs
 
@@ -162,7 +165,7 @@ Deployment process:
 6. Click "Save"
 7. The "github-pages" link is now visible in the "Deployments" section on the repository
 
-A live version of the project can be found here - https://danfnkd.github.io/playfootball/.
+A live version of the project can be found here - https://danfnkd.github.io/pl-quiz/.
 
 ## Content
 
