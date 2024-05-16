@@ -65,7 +65,7 @@ The Google Font [Kanit](https://fonts.google.com/specimen/Kanit?query=kanit) was
 
 #### Images
 
-The Premier League logo was used on the page. Different trophies were selected to represent gold, silver and bronze.
+The Premier League logo was used on the page. Different trophies were selected to represent gold, silver and bronze performance.
 
 ## Features
 
